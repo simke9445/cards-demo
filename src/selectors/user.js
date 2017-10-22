@@ -1,0 +1,1 @@
+export const getLocale = ({ user }) => user.locale;
