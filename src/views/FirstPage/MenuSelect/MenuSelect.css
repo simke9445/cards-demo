@@ -1,0 +1,8 @@
+.menu-item:hover {
+  background-color: #A06FEF !important;
+  color: white !important;
+}
+
+.menu-item {
+  background-color: #f5f8fa;
+}

@@ -5,16 +5,16 @@ import { BrowserRouter } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import { Provider as ReduxProvider } from "react-redux";
 
-import { getLocale } from '../../selectors';
+import { getLocale, getPage } from '../../selectors';
 import translations from '../../translations';
 
 import { App } from "./App";
 
 import { configureStore } from "./configureStore";
 
-const IntlApp = ( { locale, messages } ) => (
+const IntlApp = ( { locale, messages, page } ) => (
 	<IntlProvider locale={locale} messages={messages}>
-		<App/>
+		<App page={page}/>
 	</IntlProvider>
 );
 
@@ -22,10 +22,9 @@ const ConnectedIntlApp = connect(
 	state => {
 		const locale = getLocale(state);
 		const messages = translations[locale];
+		const page = getPage(state);
 
-		console.log(locale, messages, translations);
-
-		return { locale, messages };
+		return { locale, messages, page };
 	},
 	null, null, { pure: false },
 )(IntlApp);

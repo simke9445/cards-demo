@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders without crashing 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flex": "1",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="pt-card pt-elevation-2"
+    style={
+      Object {
+        "boxShadow": "rgba(0, 0, 0, 0.14) 0px 0em 2em 2px, rgb(242, 242, 242) 0px 0.75em 0px -0.25em, rgba(0, 0, 0, 0.09) 0px 1.5em 0.1875em -0.5em, rgb(229, 229, 229) 0px 1em 0px -0.5em, rgba(0, 0, 0, 0.1) 0px 1em 0.1875em -0.5em",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "500px",
+        "padding": "0",
+        "width": "340px",
+        "wordWrap": "break-word",
+      }
+    }
+  >
+    <div
+      className="pt-callout"
+      style={
+        Object {
+          "backgroundColor": "#A06FEF",
+        }
+      }
+    >
+      <h5
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <FormattedMessage
+          id="card.header"
+          values={Object {}}
+        />
+      </h5>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "padding": "24px",
+        }
+      }
+    >
+      <div>
+        test
+      </div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "height": "30%",
+          }
+        }
+      >
+        <Blueprint.Icon
+          iconName="arrow-right"
+          onClick={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#DDDDDD",
+              "borderRadius": "50%",
+              "color": "white",
+              "cursor": "pointer",
+              "display": "flex",
+              "height": "58%",
+              "justifyContent": "center",
+              "margin": "auto",
+              "width": "20%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="pt-callout"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderTop": "1px solid #DCDCDC",
+          "display": "flex",
+          "height": "10%",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </div>
+</div>
+`;

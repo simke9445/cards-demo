@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders without crashing 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F5F5F5",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "flex-start",
+    }
+  }
+>
+  <div
+    className="pt-callout"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "boxShadow": "rgba(0, 0, 0, 0.15) 0px 3px 14px",
+        "display": "flex",
+        "height": "7.5%",
+        "justifyContent": "space-between",
+        "width": "90%",
+      }
+    }
+  >
+    <h3
+      style={
+        Object {
+          "color": "#B2B6B9",
+          "paddingLeft": "14px",
+          "textAlign": "left",
+          "width": "20%",
+        }
+      }
+    >
+      <FormattedMessage
+        id="page.title"
+        values={Object {}}
+      />
+    </h3>
+    <div
+      style={
+        Object {
+          "width": "60%",
+        }
+      }
+    >
+      <div
+        className="pt-progress-bar pt-no-stripes"
+      >
+        <div
+          className="pt-progress-meter"
+          style={
+            Object {
+              "backgroundColor": "#A06FEF",
+              "display": "flex",
+              "width": "25%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "visibility": "hidden",
+          "width": "20%",
+        }
+      }
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flex": "1",
+        "justifyContent": "space-between",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="half-circle"
+      onClick={null}
+      style={
+        Object {
+          "alignItems": "center",
+          "cursor": "pointer",
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Blueprint.Icon
+        iconName="chevron-left"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": "3em",
+            "transform": "translate(-10px)",
+          }
+        }
+      />
+    </div>
+    <div
+      className="half-circle-rotated"
+      onClick={null}
+      style={
+        Object {
+          "alignItems": "center",
+          "cursor": "pointer",
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Blueprint.Icon
+        iconName="chevron-left"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": "3em",
+            "transform": "translate(-10px)",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

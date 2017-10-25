@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from "react-intl";
+import { PropTypes } from 'prop-types';
 
-import logo from './logo.svg';
-import './App.css';
+import { FirstPage, SecondPage, ThirdPage, FourthPage } from '../../views';
+
+import './App.css'; 
 
 export class App extends Component {
+  static propTypes = {
+    page: PropTypes.number.isRequired,
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">
-            <FormattedMessage id="init.title"/>
-          </h1>
-        </header>
-        <p className="App-intro">
-          <FormattedMessage id="init.message" />
-        </p>
+        {(() => {
+          switch (this.props.page) {
+            case 1:
+              return <FirstPage></FirstPage>;
+            case 2:
+              return <SecondPage></SecondPage>;
+            case 3:
+              return <ThirdPage></ThirdPage>;
+            case 4:
+              return <FourthPage></FourthPage>;
+            default:
+              return null;
+          }
+        })()}
       </div>
     );
   }

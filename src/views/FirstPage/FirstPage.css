@@ -1,0 +1,5 @@
+.menu {
+  overflow: auto;
+  max-height: 240px;
+  padding: 0 !important;
+}

@@ -9,8 +9,6 @@ import en from './en.yaml';
 
 addLocaleData([...enLocale]);
 
-console.log(en, flatten(en), 'wtf');
-
 export default {
 	[LOCALES.EN]: flatten(en),
 };

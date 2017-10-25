@@ -1,3 +1,29 @@
-init:
-  title: Welcome to React App
-  message: To get started, edit src/App.js and save to reload.
+card:
+  header: Sign up
+  footer: Why do you need this info?
+page:
+  title: Moment
+page1:
+  content: Please tell us your name...
+  select:
+    default: Choose your title
+    option1: Mr
+    option2: Mrs
+    option3: Miss
+    option4: Ms
+    option5: Doctor
+  tooltip: We need this information to proceed. Required fields are displayed in red.
+  placeholder:
+    firstName: First Name
+    lastName: Last Name
+page2:
+  content: Please tell us your gender...
+  button:
+    male: Male
+    female: Female
+page3:
+  content: Are you a UK resident?
+  button:
+    yes: Yes
+    no: No
+  tooltip: We are doing approximations based on your location.
