@@ -3,7 +3,7 @@ import { reduxForm } from 'redux-form';
 import { injectIntl } from 'react-intl';
 import { compose } from 'recompose';
 
-import { FirstPage } from './FirstPage';
+import FirstPage from './FirstPage';
 import { setPage } from './../../actions/page';
 import { getPage } from '../../selectors';
 import { validate } from '../../utils';

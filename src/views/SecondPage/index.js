@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { compose } from 'recompose';
 
-import { SecondPage } from './SecondPage';
+import SecondPage from './SecondPage';
 import { setPage } from '../../actions';
 import { getPage } from '../../selectors';
 import { validate } from '../../utils';

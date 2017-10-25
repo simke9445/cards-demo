@@ -8,7 +8,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { getLocale, getPage } from '../../selectors';
 import translations from '../../translations';
 
-import { App } from "./App";
+import App from "./App";
 
 import { configureStore } from "./configureStore";
 

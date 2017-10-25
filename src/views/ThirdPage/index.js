@@ -3,7 +3,7 @@ import { injectIntl } from 'react-intl';
 import { reduxForm } from 'redux-form';
 import { compose } from 'recompose';
 
-import { ThirdPage } from './ThirdPage';
+import ThirdPage from './ThirdPage';
 import { setPage } from '../../actions';
 import { getPage } from '../../selectors';
 import { validate } from '../../utils';

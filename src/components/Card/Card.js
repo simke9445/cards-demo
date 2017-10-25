@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FormattedMessage } from "react-intl";
 import PropTypes from 'prop-types';
 
@@ -70,43 +70,41 @@ const styles = {
     }
   };
 
-export class Card extends Component {
-  static propTypes = {
-    onNext: PropTypes.func,
-    hasNavigation: PropTypes.bool,
-    hasTooltip: PropTypes.bool,
-    tooltipMessage: PropTypes.string,
-  }
-
-  render() {
-    return (       
-      <div style={styles.container}>
-        <div style={styles.card.container} className="pt-card pt-elevation-2">
-          <div className="pt-callout" style={styles.card.header}>
-            <h5 style={{ color: 'white' }}><FormattedMessage id="card.header"/></h5>
-          </div>
-          <div style={styles.card.content}>
-            {this.props.children}
-            {this.props.hasNavigation &&
-              <div style={styles.card.next.container}>
-                <Icon onClick={this.props.onNext} iconName="arrow-right" style={styles.card.next.icon}/>
-              </div>}
-          </div>
-          <div className="pt-callout" style={styles.footer}>
-            {this.props.hasTooltip && 
-              <Tooltip
-                  className="pt-tooltip-indicator"
-                  content={
-                    <em>
-                      {this.props.tooltipMessage}
-                    </em>
-                  }
-              >
-                <span style={styles.tooltip}><FormattedMessage id="card.footer"/></span>
-              </Tooltip>}
-          </div>
-        </div>
+const Card = ({ children, onNext, hasNavigation, hasTooltip, tooltipMessage }) =>     
+  <div style={styles.container}>
+    <div style={styles.card.container} className="pt-card pt-elevation-2">
+      <div className="pt-callout" style={styles.card.header}>
+        <h5 style={{ color: 'white' }}><FormattedMessage id="card.header"/></h5>
       </div>
-    );
-  }
-}
+      <div style={styles.card.content}>
+        {children}
+        {hasNavigation &&
+          <div style={styles.card.next.container}>
+            <Icon onClick={onNext} iconName="arrow-right" style={styles.card.next.icon}/>
+          </div>}
+      </div>
+      <div className="pt-callout" style={styles.footer}>
+        {hasTooltip && 
+          <Tooltip
+              className="pt-tooltip-indicator"
+              content={
+                <em>
+                  {tooltipMessage}
+                </em>
+              }
+          >
+            <span style={styles.tooltip}><FormattedMessage id="card.footer"/></span>
+          </Tooltip>}
+      </div>
+    </div>
+  </div>
+
+
+Card.propTypes = {
+  onNext: PropTypes.func,
+  hasNavigation: PropTypes.bool,
+  hasTooltip: PropTypes.bool,
+  tooltipMessage: PropTypes.string,
+};
+
+export default Card;

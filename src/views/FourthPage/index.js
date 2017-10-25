@@ -3,7 +3,7 @@ import { injectIntl } from 'react-intl';
 import { getFormValues } from 'redux-form';
 import { compose } from 'recompose';
 
-import { FourthPage } from './FourthPage';
+import FourthPage from './FourthPage';
 import { getPage } from '../../selectors';
 import { setPage } from '../../actions';
 

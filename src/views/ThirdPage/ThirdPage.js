@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Field } from 'redux-form';
+import { FormattedMessage } from 'react-intl';
 
 import { Page, Card } from '../../components';
 import { Icon } from '@blueprintjs/core';
-import { Field } from 'redux-form';
-import { FormattedMessage } from 'react-intl';
+
 
 const styles = {
   icon: {
@@ -39,52 +40,47 @@ const styles = {
   }
 }
 
-export class ThirdPage extends Component {
-  render() {
-    const { handleSubmit, pageIndex, onPrevious, intl } = this.props;
+const ThirdPage = ({ handleSubmit, pageIndex, onPrevious, intl }) =>
+  <Page
+    hasNext={true}
+    onNext={handleSubmit}
+    hasPrevious={true}
+    onPrevious={onPrevious}
+    pageIndex={pageIndex}
+  >
+    <Card
+      hasTooltip={true}
+      tooltipMessage={intl.formatMessage({ id:"page3.tooltip" })}
+    >
+      <div style={styles.header}>
+        <Icon iconName="home" style={styles.icon}></Icon>
+        <h4><FormattedMessage id={'page3.content'}/></h4>
+      </div>
+      <div className="pt-control-group pt-horizontal" style={styles.controls}>
+        <Field name="ukResident" component={({ input }) => 
+          <button
+            onClick={() => input.onChange("No") || handleSubmit()}
+            type="button"
+            className="pt-button pt-large"
+            style={styles.button}
+          >
+            <FormattedMessage id={'page3.button.no'}/>
+            <Icon iconName="delete" style={styles.buttonIconNo}></Icon>
+          </button>
+        }/>
+        <Field name="ukResident" component={({ input }) => 
+          <button 
+            onClick={() => input.onChange("Yes") || handleSubmit()}
+            type="button"
+            className="pt-button pt-large"
+            style={styles.button}
+          >
+            <FormattedMessage id={'page3.button.yes'}/>
+            <Icon iconName="endorsed" style={styles.buttonIconYes}></Icon>
+          </button>
+        }/>
+      </div>
+    </Card>
+  </Page>
 
-    return (
-      <Page
-        hasNext={true}
-        onNext={handleSubmit}
-        hasPrevious={true}
-        onPrevious={onPrevious}
-        pageIndex={pageIndex}
-      >
-        <Card
-          hasTooltip={true}
-          tooltipMessage={intl.formatMessage({ id:"page3.tooltip" })}
-        >
-          <div style={styles.header}>
-            <Icon iconName="home" style={styles.icon}></Icon>
-            <h4><FormattedMessage id={'page3.content'}/></h4>
-          </div>
-          <div className="pt-control-group pt-horizontal" style={styles.controls}>
-            <Field name="ukResident" component={({ input }) => 
-              <button
-                onClick={() => input.onChange("No") || handleSubmit()}
-                type="button"
-                className="pt-button pt-large"
-                style={styles.button}
-              >
-                <FormattedMessage id={'page3.button.no'}/>
-                <Icon iconName="delete" style={styles.buttonIconNo}></Icon>
-              </button>
-            }/>
-            <Field name="ukResident" component={({ input }) => 
-              <button 
-                onClick={() => input.onChange("Yes") || handleSubmit()}
-                type="button"
-                className="pt-button pt-large"
-                style={styles.button}
-              >
-                <FormattedMessage id={'page3.button.yes'}/>
-                <Icon iconName="endorsed" style={styles.buttonIconYes}></Icon>
-              </button>
-            }/>
-          </div>
-        </Card>
-      </Page>
-    );
-  }
-}
+export default ThirdPage;

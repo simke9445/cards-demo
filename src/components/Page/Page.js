@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
@@ -66,39 +66,34 @@ const styles = {
   }
 }
 
-export class Page extends Component {
-  static propTypes = {
-    pageIndex: PropTypes.number.isRequired,
-    onNext: PropTypes.func,
-    onPrevious: PropTypes.func,
-    hasNext: PropTypes.bool,
-    hasPrevious: PropTypes.bool,
-  }
-
-  render() {
-    const { hasNext, hasPrevious, pageIndex, onNext, onPrevious } = this.props;
-
-    return (
-      <div style={styles.container}>
-        <div className="pt-callout" style={styles.topBar}>
-          <h3 style={styles.topBarHeader}><FormattedMessage id={'page.title'}/></h3>
-          <div style={styles.progressBarContainer}>
-            <div className="pt-progress-bar pt-no-stripes">
-              <div className="pt-progress-meter" style={{ ...styles.progressBarMeter, width: `${100*pageIndex/4}%` }}></div>
-            </div>
-          </div>
-          <div style={styles.empty}>{null}</div>
+const Page = ({ children, hasNext, hasPrevious, pageIndex, onNext, onPrevious }) => 
+  <div style={styles.container}>
+    <div className="pt-callout" style={styles.topBar}>
+      <h3 style={styles.topBarHeader}><FormattedMessage id={'page.title'}/></h3>
+      <div style={styles.progressBarContainer}>
+        <div className="pt-progress-bar pt-no-stripes">
+          <div className="pt-progress-meter" style={{ ...styles.progressBarMeter, width: `${100*pageIndex/4}%` }}></div>
         </div>
-        <div style={styles.contentContainer}>
-          <div className="half-circle" style={styles.halfCircle} onClick={hasPrevious ? onPrevious : null}>
-            <Icon iconName="chevron-left" style={styles.leftArrow}/>
-          </div>
-            {this.props.children}
-          <div className="half-circle-rotated" style={styles.halfCircle} onClick={hasNext ? onNext : null}>
-            <Icon iconName="chevron-left" style={styles.rightArrow}/>
-          </div>
-        </div> 
       </div>
-    );
-  }
-}
+      <div style={styles.empty}>{null}</div>
+    </div>
+    <div style={styles.contentContainer}>
+      <div className="half-circle" style={styles.halfCircle} onClick={hasPrevious ? onPrevious : null}>
+        <Icon iconName="chevron-left" style={styles.leftArrow}/>
+      </div>
+        {children}
+      <div className="half-circle-rotated" style={styles.halfCircle} onClick={hasNext ? onNext : null}>
+        <Icon iconName="chevron-left" style={styles.rightArrow}/>
+      </div>
+    </div> 
+  </div>
+
+Page.propTypes = {
+  pageIndex: PropTypes.number.isRequired,
+  onNext: PropTypes.func,
+  onPrevious: PropTypes.func,
+  hasNext: PropTypes.bool,
+  hasPrevious: PropTypes.bool,
+};
+
+export default Page;
