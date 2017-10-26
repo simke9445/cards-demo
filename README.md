@@ -2,6 +2,7 @@
 It contains the standard Create React App structure with a couple of differences in source folder.
 
     .
+    ├── __mocks__              # Jest mock folder (mocking imports)
     ├── actions                # Redux Actions
     ├── components             # Presentational Components used within the program
     ├── constants              # Static objects used within the program
@@ -14,7 +15,8 @@ It contains the standard Create React App structure with a couple of differences
     ├── utils                  # Utility files
     └── views                  # Container Components (main views, route containers)
     
-To start/build/test the program just run the corresponding npm script. (npm run start/build/test)
+To start/build/test the program just run the corresponding npm script. (npm run start/build/test).
+For serving the static files you're gonna need a static server installed with npm install -g serve.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
