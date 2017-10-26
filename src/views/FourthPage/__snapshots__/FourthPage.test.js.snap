@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectedFourthPage renders without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <IntlProvider
+    locale="en"
+    messages={
+      Object {
+        "card.footer": "Why do you need this info?",
+        "card.header": "Sign up",
+        "page.title": "Moment",
+        "page1.content": "Please tell us your name...",
+        "page1.placeholder.firstName": "First Name",
+        "page1.placeholder.lastName": "Last Name",
+        "page1.select.default": "Choose your title",
+        "page1.select.option1": "Mr",
+        "page1.select.option2": "Mrs",
+        "page1.select.option3": "Miss",
+        "page1.select.option4": "Ms",
+        "page1.select.option5": "Doctor",
+        "page1.tooltip": "We need this information to proceed. Required fields are displayed in red.",
+        "page2.button.female": "Female",
+        "page2.button.male": "Male",
+        "page2.content": "Please tell us your gender...",
+        "page3.button.no": "No",
+        "page3.button.yes": "Yes",
+        "page3.content": "Are you a UK resident?",
+        "page3.tooltip": "We are doing approximations based on your location.",
+      }
+    }
+  >
+    <Connect(FourthPage)>
+      <FourthPage
+        formValue={
+          Object {
+            "test": [Function],
+          }
+        }
+        onPrevious={[Function]}
+        pageIndex={4}
+      >
+        <FourthPage
+          formValue={
+            Object {
+              "test": [Function],
+            }
+          }
+          intl={
+            Object {
+              "formatMessage": [Function],
+            }
+          }
+          onPrevious={[Function]}
+          pageIndex={4}
+        >
+          <Page
+            hasPrevious={true}
+            onPrevious={[Function]}
+            pageIndex={4}
+          >
+            <div
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F5F5",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "height": "100%",
+                  "justifyContent": "flex-start",
+                }
+              }
+            >
+              <div
+                className="pt-callout"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "white",
+                    "boxShadow": "rgba(0, 0, 0, 0.15) 0px 3px 14px",
+                    "display": "flex",
+                    "height": "7.5%",
+                    "justifyContent": "space-between",
+                    "width": "90%",
+                  }
+                }
+              >
+                <h3
+                  style={
+                    Object {
+                      "color": "#B2B6B9",
+                      "paddingLeft": "14px",
+                      "textAlign": "left",
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <FormattedMessage
+                    id="page.title"
+                    values={Object {}}
+                  >
+                    <span>
+                      Moment
+                    </span>
+                  </FormattedMessage>
+                </h3>
+                <div
+                  style={
+                    Object {
+                      "width": "60%",
+                    }
+                  }
+                >
+                  <div
+                    className="pt-progress-bar pt-no-stripes"
+                  >
+                    <div
+                      className="pt-progress-meter"
+                      style={
+                        Object {
+                          "backgroundColor": "#A06FEF",
+                          "display": "flex",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+                <div
+                  style={
+                    Object {
+                      "visibility": "hidden",
+                      "width": "20%",
+                    }
+                  }
+                />
+              </div>
+              <div
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flex": "1",
+                    "justifyContent": "space-between",
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  className="half-circle"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "cursor": "pointer",
+                      "display": "flex",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Blueprint.Icon
+                    iconName="chevron-left"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": "3em",
+                        "transform": "translate(-10px)",
+                      }
+                    }
+                  >
+                    <span
+                      className="pt-icon-standard pt-icon-chevron-left"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": "3em",
+                          "transform": "translate(-10px)",
+                        }
+                      }
+                    />
+                  </Blueprint.Icon>
+                </div>
+                <Card>
+                  <div
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                        "flex": "1",
+                        "flexDirection": "column",
+                        "height": "100%",
+                        "justifyContent": "center",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="pt-card pt-elevation-2"
+                      style={
+                        Object {
+                          "boxShadow": "rgba(0, 0, 0, 0.14) 0px 0em 2em 2px, rgb(242, 242, 242) 0px 0.75em 0px -0.25em, rgba(0, 0, 0, 0.09) 0px 1.5em 0.1875em -0.5em, rgb(229, 229, 229) 0px 1em 0px -0.5em, rgba(0, 0, 0, 0.1) 0px 1em 0.1875em -0.5em",
+                          "display": "flex",
+                          "flexDirection": "column",
+                          "height": "500px",
+                          "padding": "0",
+                          "width": "340px",
+                          "wordWrap": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="pt-callout"
+                        style={
+                          Object {
+                            "backgroundColor": "#A06FEF",
+                          }
+                        }
+                      >
+                        <h5
+                          style={
+                            Object {
+                              "color": "white",
+                            }
+                          }
+                        >
+                          <FormattedMessage
+                            id="card.header"
+                            values={Object {}}
+                          >
+                            <span>
+                              Sign up
+                            </span>
+                          </FormattedMessage>
+                        </h5>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "display": "flex",
+                            "flex": 1,
+                            "flexDirection": "column",
+                            "justifyContent": "center",
+                            "padding": "24px",
+                          }
+                        }
+                      >
+                        <pre
+                          style={
+                            Object {
+                              "textAlign": "start",
+                            }
+                          }
+                        >
+                          <code>
+                            {}
+                          </code>
+                        </pre>
+                      </div>
+                      <div
+                        className="pt-callout"
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "white",
+                            "borderTop": "1px solid #DCDCDC",
+                            "display": "flex",
+                            "height": "10%",
+                            "justifyContent": "center",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>
+                </Card>
+                <div
+                  className="half-circle-rotated"
+                  onClick={null}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "cursor": "pointer",
+                      "display": "flex",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Blueprint.Icon
+                    iconName="chevron-left"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontSize": "3em",
+                        "transform": "translate(-10px)",
+                      }
+                    }
+                  >
+                    <span
+                      className="pt-icon-standard pt-icon-chevron-left"
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": "3em",
+                          "transform": "translate(-10px)",
+                        }
+                      }
+                    />
+                  </Blueprint.Icon>
+                </div>
+              </div>
+            </div>
+          </Page>
+        </FourthPage>
+      </FourthPage>
+    </Connect(FourthPage)>
+  </IntlProvider>
+</Provider>
+`;
+
+exports[`FourthPage renders without crashing 1`] = `
+<FourthPage
+  formValue={
+    Object {
+      "test": [Function],
+    }
+  }
+/>
+`;

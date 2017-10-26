@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConnectedFirstPage renders without crashing 1`] = `
+exports[`ConnectedThirdPage renders without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -40,14 +40,13 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
       }
     }
   >
-    <Connect(ReduxForm)
-      onSubmit={[Function]}
-    >
+    <Connect(ReduxForm)>
       <ReduxForm
+        onPrevious={[Function]}
         onSubmit={[Function]}
-        pageIndex={1}
+        pageIndex={3}
       >
-        <Connect(Form(FirstPage))
+        <Connect(Form(ThirdPage))
           destroyOnUnmount={false}
           enableReinitialize={false}
           forceUnregisterOnUnmount={true}
@@ -55,8 +54,9 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
           getFormState={[Function]}
           initialValues={undefined}
           keepDirtyOnReinitialize={false}
+          onPrevious={[Function]}
           onSubmit={[Function]}
-          pageIndex={1}
+          pageIndex={3}
           persistentSubmitErrors={false}
           pure={true}
           shouldAsyncValidate={[Function]}
@@ -67,7 +67,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
           touchOnChange={false}
           validate={[Function]}
         >
-          <Form(FirstPage)
+          <Form(ThirdPage)
             anyTouched={false}
             array={
               Object {
@@ -116,8 +116,9 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
             initialized={false}
             invalid={false}
             keepDirtyOnReinitialize={false}
+            onPrevious={[Function]}
             onSubmit={[Function]}
-            pageIndex={1}
+            pageIndex={3}
             persistentSubmitErrors={false}
             pristine={true}
             pure={true}
@@ -154,7 +155,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
             values={Object {}}
             warning={undefined}
           >
-            <FirstPage
+            <ThirdPage
               anyTouched={false}
               array={
                 Object {
@@ -188,8 +189,9 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
               initialize={[Function]}
               initialized={false}
               invalid={false}
+              onPrevious={[Function]}
               onSubmit={[Function]}
-              pageIndex={1}
+              pageIndex={3}
               pristine={true}
               pure={true}
               reset={[Function]}
@@ -204,7 +206,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
               validate={[Function]}
               warning={undefined}
             >
-              <FirstPage
+              <ThirdPage
                 anyTouched={false}
                 array={
                   Object {
@@ -243,8 +245,9 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                   }
                 }
                 invalid={false}
+                onPrevious={[Function]}
                 onSubmit={[Function]}
-                pageIndex={1}
+                pageIndex={3}
                 pristine={true}
                 pure={true}
                 reset={[Function]}
@@ -261,8 +264,10 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
               >
                 <Page
                   hasNext={true}
+                  hasPrevious={true}
                   onNext={[Function]}
-                  pageIndex={1}
+                  onPrevious={[Function]}
+                  pageIndex={3}
                 >
                   <div
                     style={
@@ -325,7 +330,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                               Object {
                                 "backgroundColor": "#A06FEF",
                                 "display": "flex",
-                                "width": "25%",
+                                "width": "75%",
                               }
                             }
                           />
@@ -353,7 +358,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                     >
                       <div
                         className="half-circle"
-                        onClick={null}
+                        onClick={[Function]}
                         style={
                           Object {
                             "alignItems": "center",
@@ -386,10 +391,8 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                         </Blueprint.Icon>
                       </div>
                       <Card
-                        hasNavigation={true}
                         hasTooltip={true}
-                        onNext={[Function]}
-                        tooltipMessage="page1.tooltip"
+                        tooltipMessage="page3.tooltip"
                       >
                         <div
                           style={
@@ -457,6 +460,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                               <div
                                 style={
                                   Object {
+                                    "alignItems": "center",
                                     "display": "flex",
                                     "flexDirection": "column",
                                     "height": "30%",
@@ -465,7 +469,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                 }
                               >
                                 <Blueprint.Icon
-                                  iconName="mugshot"
+                                  iconName="home"
                                   style={
                                     Object {
                                       "color": "#A06FEF",
@@ -474,7 +478,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                   }
                                 >
                                   <span
-                                    className="pt-icon-standard pt-icon-mugshot"
+                                    className="pt-icon-standard pt-icon-home"
                                     style={
                                       Object {
                                         "color": "#A06FEF",
@@ -485,27 +489,28 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                 </Blueprint.Icon>
                                 <h4>
                                   <FormattedMessage
-                                    id="page1.content"
+                                    id="page3.content"
                                     values={Object {}}
                                   >
                                     <span>
-                                      Please tell us your name...
+                                      Are you a UK resident?
                                     </span>
                                   </FormattedMessage>
                                 </h4>
                               </div>
                               <div
-                                className="pt-control-group pt-vertical"
+                                className="pt-control-group pt-horizontal"
                                 style={
                                   Object {
-                                    "height": "45%",
-                                    "justifyContent": "space-around",
+                                    "alignItems": "center",
+                                    "display": "flex",
+                                    "justifyContent": "center",
                                   }
                                 }
                               >
                                 <Field
                                   component={[Function]}
-                                  name="title"
+                                  name="ukResident"
                                 >
                                   <Connect(ConnectedField)
                                     _reduxForm={
@@ -558,8 +563,9 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                         "initialized": false,
                                         "invalid": false,
                                         "keepDirtyOnReinitialize": false,
+                                        "onPrevious": [Function],
                                         "onSubmit": [Function],
-                                        "pageIndex": 1,
+                                        "pageIndex": 3,
                                         "persistentSubmitErrors": false,
                                         "pristine": true,
                                         "pure": true,
@@ -602,7 +608,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                       }
                                     }
                                     component={[Function]}
-                                    name="title"
+                                    name="ukResident"
                                     normalize={[Function]}
                                   >
                                     <ConnectedField
@@ -656,8 +662,9 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                           "initialized": false,
                                           "invalid": false,
                                           "keepDirtyOnReinitialize": false,
+                                          "onPrevious": [Function],
                                           "onSubmit": [Function],
-                                          "pageIndex": 1,
+                                          "pageIndex": 3,
                                           "persistentSubmitErrors": false,
                                           "pristine": true,
                                           "pure": true,
@@ -706,7 +713,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                       dirty={false}
                                       dispatch={[Function]}
                                       initial={undefined}
-                                      name="title"
+                                      name="ukResident"
                                       normalize={[Function]}
                                       pristine={true}
                                       state={undefined}
@@ -717,10 +724,10 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                       syncWarning={undefined}
                                       value={undefined}
                                     >
-                                      <MenuSelectField
+                                      <component
                                         input={
                                           Object {
-                                            "name": "title",
+                                            "name": "ukResident",
                                             "onBlur": [Function],
                                             "onChange": [Function],
                                             "onDragStart": [Function],
@@ -750,801 +757,347 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                           }
                                         }
                                       >
-                                        <MenuSelect
-                                          defaultOption="page1.select.default"
-                                          isInvalid={false}
-                                          items={
-                                            Array [
-                                              "page1.select.option1",
-                                              "page1.select.option2",
-                                              "page1.select.option3",
-                                              "page1.select.option4",
-                                              "page1.select.option5",
-                                            ]
-                                          }
-                                          name="title"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onDragStart={[Function]}
-                                          onDrop={[Function]}
-                                          onFocus={[Function]}
-                                          value=""
-                                        >
-                                          <Blueprint.Popover
-                                            arrowSize={30}
-                                            className=""
-                                            content={
-                                              <Blueprint.Menu
-                                                className="pt-large menu"
-                                              >
-                                                <Blueprint.MenuItem
-                                                  className="menu-item"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  popoverProps={Object {}}
-                                                  shouldDismissPopover={true}
-                                                  submenuViewportMargin={Object {}}
-                                                  text={
-                                                    <FormattedMessage
-                                                      id="page1.select.option1"
-                                                      values={Object {}}
-                                                    />
-                                                  }
-                                                  useSmartPositioning={true}
-                                                />
-                                                <Blueprint.MenuItem
-                                                  className="menu-item"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  popoverProps={Object {}}
-                                                  shouldDismissPopover={true}
-                                                  submenuViewportMargin={Object {}}
-                                                  text={
-                                                    <FormattedMessage
-                                                      id="page1.select.option2"
-                                                      values={Object {}}
-                                                    />
-                                                  }
-                                                  useSmartPositioning={true}
-                                                />
-                                                <Blueprint.MenuItem
-                                                  className="menu-item"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  popoverProps={Object {}}
-                                                  shouldDismissPopover={true}
-                                                  submenuViewportMargin={Object {}}
-                                                  text={
-                                                    <FormattedMessage
-                                                      id="page1.select.option3"
-                                                      values={Object {}}
-                                                    />
-                                                  }
-                                                  useSmartPositioning={true}
-                                                />
-                                                <Blueprint.MenuItem
-                                                  className="menu-item"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  popoverProps={Object {}}
-                                                  shouldDismissPopover={true}
-                                                  submenuViewportMargin={Object {}}
-                                                  text={
-                                                    <FormattedMessage
-                                                      id="page1.select.option4"
-                                                      values={Object {}}
-                                                    />
-                                                  }
-                                                  useSmartPositioning={true}
-                                                />
-                                                <Blueprint.MenuItem
-                                                  className="menu-item"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  popoverProps={Object {}}
-                                                  shouldDismissPopover={true}
-                                                  submenuViewportMargin={Object {}}
-                                                  text={
-                                                    <FormattedMessage
-                                                      id="page1.select.option5"
-                                                      values={Object {}}
-                                                    />
-                                                  }
-                                                  useSmartPositioning={true}
-                                                />
-                                              </Blueprint.Menu>
+                                        <button
+                                          className="pt-button pt-large"
+                                          onClick={[Function]}
+                                          style={
+                                            Object {
+                                              "alignItems": "center",
+                                              "backgroundColor": "white",
+                                              "borderRadius": "16px",
+                                              "display": "flex",
+                                              "justifyContent": "space-around",
+                                              "margin": "8px",
+                                              "width": "35%",
                                             }
-                                            defaultIsOpen={false}
-                                            hoverCloseDelay={300}
-                                            hoverOpenDelay={150}
-                                            inheritDarkTheme={true}
-                                            inline={false}
-                                            interactionKind={0}
-                                            isDisabled={false}
-                                            isModal={false}
-                                            openOnTargetFocus={true}
-                                            popoverClassName=""
-                                            position={7}
-                                            rootElementTag="span"
-                                            transitionDuration={300}
-                                            useSmartArrowPositioning={true}
-                                            useSmartPositioning={false}
+                                          }
+                                          type="button"
+                                        >
+                                          <FormattedMessage
+                                            id="page3.button.no"
+                                            values={Object {}}
+                                          >
+                                            <span>
+                                              No
+                                            </span>
+                                          </FormattedMessage>
+                                          <Blueprint.Icon
+                                            iconName="delete"
+                                            style={
+                                              Object {
+                                                "color": "#DB3B55",
+                                              }
+                                            }
                                           >
                                             <span
-                                              className="pt-popover-target"
-                                              onClick={[Function]}
-                                            >
-                                              <button
-                                                className="pt-button pt-fill pt-large"
-                                                key=".0"
-                                                style={
-                                                  Object {
-                                                    "alignItems": "center",
-                                                    "display": "flex",
-                                                    "justifyContent": "space-between",
-                                                  }
+                                              className="pt-icon-standard pt-icon-delete"
+                                              style={
+                                                Object {
+                                                  "color": "#DB3B55",
                                                 }
-                                                tabIndex={undefined}
-                                                type="button"
-                                              >
-                                                <FormattedMessage
-                                                  id="page1.select.default"
-                                                  values={Object {}}
-                                                >
-                                                  <span>
-                                                    Choose your title
-                                                  </span>
-                                                </FormattedMessage>
-                                                <span
-                                                  className="pt-icon-standard pt-icon-caret-down pt-align-right"
-                                                />
-                                              </button>
-                                              <Blueprint.Overlay
-                                                autoFocus={true}
-                                                backdropClassName="pt-popover-backdrop"
-                                                backdropProps={Object {}}
-                                                canEscapeKeyClose={true}
-                                                canOutsideClickClose={true}
-                                                className={undefined}
-                                                didOpen={[Function]}
-                                                enforceFocus={true}
-                                                hasBackdrop={false}
-                                                inline={false}
-                                                isOpen={false}
-                                                lazy={true}
-                                                onClose={[Function]}
-                                                transitionDuration={300}
-                                                transitionName="pt-popover"
-                                              />
+                                              }
+                                            />
+                                          </Blueprint.Icon>
+                                        </button>
+                                      </component>
+                                    </ConnectedField>
+                                  </Connect(ConnectedField)>
+                                </Field>
+                                <Field
+                                  component={[Function]}
+                                  name="ukResident"
+                                >
+                                  <Connect(ConnectedField)
+                                    _reduxForm={
+                                      Object {
+                                        "anyTouched": false,
+                                        "array": Object {
+                                          "insert": [Function],
+                                          "move": [Function],
+                                          "pop": [Function],
+                                          "push": [Function],
+                                          "remove": [Function],
+                                          "removeAll": [Function],
+                                          "shift": [Function],
+                                          "splice": [Function],
+                                          "swap": [Function],
+                                          "unshift": [Function],
+                                        },
+                                        "arrayInsert": [Function],
+                                        "arrayMove": [Function],
+                                        "arrayPop": [Function],
+                                        "arrayPush": [Function],
+                                        "arrayRemove": [Function],
+                                        "arrayRemoveAll": [Function],
+                                        "arrayShift": [Function],
+                                        "arraySplice": [Function],
+                                        "arraySwap": [Function],
+                                        "arrayUnshift": [Function],
+                                        "asyncErrors": undefined,
+                                        "asyncValidate": [Function],
+                                        "asyncValidating": false,
+                                        "autofill": [Function],
+                                        "blur": [Function],
+                                        "change": [Function],
+                                        "clearAsyncError": [Function],
+                                        "clearSubmit": [Function],
+                                        "clearSubmitErrors": [Function],
+                                        "destroy": [Function],
+                                        "destroyOnUnmount": false,
+                                        "dirty": false,
+                                        "dispatch": [Function],
+                                        "enableReinitialize": false,
+                                        "error": undefined,
+                                        "focus": [Function],
+                                        "forceUnregisterOnUnmount": true,
+                                        "form": "cards",
+                                        "getFormState": [Function],
+                                        "getValues": [Function],
+                                        "initialValues": undefined,
+                                        "initialize": [Function],
+                                        "initialized": false,
+                                        "invalid": false,
+                                        "keepDirtyOnReinitialize": false,
+                                        "onPrevious": [Function],
+                                        "onSubmit": [Function],
+                                        "pageIndex": 3,
+                                        "persistentSubmitErrors": false,
+                                        "pristine": true,
+                                        "pure": true,
+                                        "register": [Function],
+                                        "registerField": [Function],
+                                        "registerInnerOnSubmit": [Function],
+                                        "registeredFields": undefined,
+                                        "reset": [Function],
+                                        "sectionPrefix": undefined,
+                                        "setSubmitFailed": [Function],
+                                        "setSubmitSucceeded": [Function],
+                                        "shouldAsyncValidate": [Function],
+                                        "shouldError": [Function],
+                                        "shouldValidate": [Function],
+                                        "shouldWarn": [Function],
+                                        "startAsyncValidation": [Function],
+                                        "startSubmit": [Function],
+                                        "stopAsyncValidation": [Function],
+                                        "stopSubmit": [Function],
+                                        "submit": [Function],
+                                        "submitFailed": false,
+                                        "submitSucceeded": false,
+                                        "submitting": false,
+                                        "syncErrors": Object {},
+                                        "syncWarnings": Object {},
+                                        "touch": [Function],
+                                        "touchOnBlur": true,
+                                        "touchOnChange": false,
+                                        "triggerSubmit": undefined,
+                                        "unregister": [Function],
+                                        "unregisterField": [Function],
+                                        "untouch": [Function],
+                                        "updateSyncErrors": [Function],
+                                        "updateSyncWarnings": [Function],
+                                        "valid": true,
+                                        "validExceptSubmit": true,
+                                        "validate": [Function],
+                                        "values": Object {},
+                                        "warning": undefined,
+                                      }
+                                    }
+                                    component={[Function]}
+                                    name="ukResident"
+                                    normalize={[Function]}
+                                  >
+                                    <ConnectedField
+                                      _reduxForm={
+                                        Object {
+                                          "anyTouched": false,
+                                          "array": Object {
+                                            "insert": [Function],
+                                            "move": [Function],
+                                            "pop": [Function],
+                                            "push": [Function],
+                                            "remove": [Function],
+                                            "removeAll": [Function],
+                                            "shift": [Function],
+                                            "splice": [Function],
+                                            "swap": [Function],
+                                            "unshift": [Function],
+                                          },
+                                          "arrayInsert": [Function],
+                                          "arrayMove": [Function],
+                                          "arrayPop": [Function],
+                                          "arrayPush": [Function],
+                                          "arrayRemove": [Function],
+                                          "arrayRemoveAll": [Function],
+                                          "arrayShift": [Function],
+                                          "arraySplice": [Function],
+                                          "arraySwap": [Function],
+                                          "arrayUnshift": [Function],
+                                          "asyncErrors": undefined,
+                                          "asyncValidate": [Function],
+                                          "asyncValidating": false,
+                                          "autofill": [Function],
+                                          "blur": [Function],
+                                          "change": [Function],
+                                          "clearAsyncError": [Function],
+                                          "clearSubmit": [Function],
+                                          "clearSubmitErrors": [Function],
+                                          "destroy": [Function],
+                                          "destroyOnUnmount": false,
+                                          "dirty": false,
+                                          "dispatch": [Function],
+                                          "enableReinitialize": false,
+                                          "error": undefined,
+                                          "focus": [Function],
+                                          "forceUnregisterOnUnmount": true,
+                                          "form": "cards",
+                                          "getFormState": [Function],
+                                          "getValues": [Function],
+                                          "initialValues": undefined,
+                                          "initialize": [Function],
+                                          "initialized": false,
+                                          "invalid": false,
+                                          "keepDirtyOnReinitialize": false,
+                                          "onPrevious": [Function],
+                                          "onSubmit": [Function],
+                                          "pageIndex": 3,
+                                          "persistentSubmitErrors": false,
+                                          "pristine": true,
+                                          "pure": true,
+                                          "register": [Function],
+                                          "registerField": [Function],
+                                          "registerInnerOnSubmit": [Function],
+                                          "registeredFields": undefined,
+                                          "reset": [Function],
+                                          "sectionPrefix": undefined,
+                                          "setSubmitFailed": [Function],
+                                          "setSubmitSucceeded": [Function],
+                                          "shouldAsyncValidate": [Function],
+                                          "shouldError": [Function],
+                                          "shouldValidate": [Function],
+                                          "shouldWarn": [Function],
+                                          "startAsyncValidation": [Function],
+                                          "startSubmit": [Function],
+                                          "stopAsyncValidation": [Function],
+                                          "stopSubmit": [Function],
+                                          "submit": [Function],
+                                          "submitFailed": false,
+                                          "submitSucceeded": false,
+                                          "submitting": false,
+                                          "syncErrors": Object {},
+                                          "syncWarnings": Object {},
+                                          "touch": [Function],
+                                          "touchOnBlur": true,
+                                          "touchOnChange": false,
+                                          "triggerSubmit": undefined,
+                                          "unregister": [Function],
+                                          "unregisterField": [Function],
+                                          "untouch": [Function],
+                                          "updateSyncErrors": [Function],
+                                          "updateSyncWarnings": [Function],
+                                          "valid": true,
+                                          "validExceptSubmit": true,
+                                          "validate": [Function],
+                                          "values": Object {},
+                                          "warning": undefined,
+                                        }
+                                      }
+                                      _value={undefined}
+                                      asyncError={undefined}
+                                      asyncValidating={false}
+                                      component={[Function]}
+                                      dirty={false}
+                                      dispatch={[Function]}
+                                      initial={undefined}
+                                      name="ukResident"
+                                      normalize={[Function]}
+                                      pristine={true}
+                                      state={undefined}
+                                      submitError={undefined}
+                                      submitFailed={undefined}
+                                      submitting={undefined}
+                                      syncError={undefined}
+                                      syncWarning={undefined}
+                                      value={undefined}
+                                    >
+                                      <component
+                                        input={
+                                          Object {
+                                            "name": "ukResident",
+                                            "onBlur": [Function],
+                                            "onChange": [Function],
+                                            "onDragStart": [Function],
+                                            "onDrop": [Function],
+                                            "onFocus": [Function],
+                                            "value": "",
+                                          }
+                                        }
+                                        meta={
+                                          Object {
+                                            "active": false,
+                                            "asyncValidating": false,
+                                            "autofilled": false,
+                                            "dirty": false,
+                                            "dispatch": [Function],
+                                            "error": undefined,
+                                            "form": "cards",
+                                            "initial": undefined,
+                                            "invalid": false,
+                                            "pristine": true,
+                                            "submitFailed": false,
+                                            "submitting": false,
+                                            "touched": false,
+                                            "valid": true,
+                                            "visited": false,
+                                            "warning": undefined,
+                                          }
+                                        }
+                                      >
+                                        <button
+                                          className="pt-button pt-large"
+                                          onClick={[Function]}
+                                          style={
+                                            Object {
+                                              "alignItems": "center",
+                                              "backgroundColor": "white",
+                                              "borderRadius": "16px",
+                                              "display": "flex",
+                                              "justifyContent": "space-around",
+                                              "margin": "8px",
+                                              "width": "35%",
+                                            }
+                                          }
+                                          type="button"
+                                        >
+                                          <FormattedMessage
+                                            id="page3.button.yes"
+                                            values={Object {}}
+                                          >
+                                            <span>
+                                              Yes
                                             </span>
-                                          </Blueprint.Popover>
-                                        </MenuSelect>
-                                      </MenuSelectField>
+                                          </FormattedMessage>
+                                          <Blueprint.Icon
+                                            iconName="endorsed"
+                                            style={
+                                              Object {
+                                                "color": "#22DD4E",
+                                              }
+                                            }
+                                          >
+                                            <span
+                                              className="pt-icon-standard pt-icon-endorsed"
+                                              style={
+                                                Object {
+                                                  "color": "#22DD4E",
+                                                }
+                                              }
+                                            />
+                                          </Blueprint.Icon>
+                                        </button>
+                                      </component>
                                     </ConnectedField>
                                   </Connect(ConnectedField)>
                                 </Field>
-                                <Field
-                                  className="pt-input pt-large"
-                                  component={[Function]}
-                                  name="firstName"
-                                  props={
-                                    Object {
-                                      "placeholder": "page1.placeholder.firstName",
-                                    }
-                                  }
-                                  type="text"
-                                >
-                                  <Connect(ConnectedField)
-                                    _reduxForm={
-                                      Object {
-                                        "anyTouched": false,
-                                        "array": Object {
-                                          "insert": [Function],
-                                          "move": [Function],
-                                          "pop": [Function],
-                                          "push": [Function],
-                                          "remove": [Function],
-                                          "removeAll": [Function],
-                                          "shift": [Function],
-                                          "splice": [Function],
-                                          "swap": [Function],
-                                          "unshift": [Function],
-                                        },
-                                        "arrayInsert": [Function],
-                                        "arrayMove": [Function],
-                                        "arrayPop": [Function],
-                                        "arrayPush": [Function],
-                                        "arrayRemove": [Function],
-                                        "arrayRemoveAll": [Function],
-                                        "arrayShift": [Function],
-                                        "arraySplice": [Function],
-                                        "arraySwap": [Function],
-                                        "arrayUnshift": [Function],
-                                        "asyncErrors": undefined,
-                                        "asyncValidate": [Function],
-                                        "asyncValidating": false,
-                                        "autofill": [Function],
-                                        "blur": [Function],
-                                        "change": [Function],
-                                        "clearAsyncError": [Function],
-                                        "clearSubmit": [Function],
-                                        "clearSubmitErrors": [Function],
-                                        "destroy": [Function],
-                                        "destroyOnUnmount": false,
-                                        "dirty": false,
-                                        "dispatch": [Function],
-                                        "enableReinitialize": false,
-                                        "error": undefined,
-                                        "focus": [Function],
-                                        "forceUnregisterOnUnmount": true,
-                                        "form": "cards",
-                                        "getFormState": [Function],
-                                        "getValues": [Function],
-                                        "initialValues": undefined,
-                                        "initialize": [Function],
-                                        "initialized": false,
-                                        "invalid": false,
-                                        "keepDirtyOnReinitialize": false,
-                                        "onSubmit": [Function],
-                                        "pageIndex": 1,
-                                        "persistentSubmitErrors": false,
-                                        "pristine": true,
-                                        "pure": true,
-                                        "register": [Function],
-                                        "registerField": [Function],
-                                        "registerInnerOnSubmit": [Function],
-                                        "registeredFields": undefined,
-                                        "reset": [Function],
-                                        "sectionPrefix": undefined,
-                                        "setSubmitFailed": [Function],
-                                        "setSubmitSucceeded": [Function],
-                                        "shouldAsyncValidate": [Function],
-                                        "shouldError": [Function],
-                                        "shouldValidate": [Function],
-                                        "shouldWarn": [Function],
-                                        "startAsyncValidation": [Function],
-                                        "startSubmit": [Function],
-                                        "stopAsyncValidation": [Function],
-                                        "stopSubmit": [Function],
-                                        "submit": [Function],
-                                        "submitFailed": false,
-                                        "submitSucceeded": false,
-                                        "submitting": false,
-                                        "syncErrors": Object {},
-                                        "syncWarnings": Object {},
-                                        "touch": [Function],
-                                        "touchOnBlur": true,
-                                        "touchOnChange": false,
-                                        "triggerSubmit": undefined,
-                                        "unregister": [Function],
-                                        "unregisterField": [Function],
-                                        "untouch": [Function],
-                                        "updateSyncErrors": [Function],
-                                        "updateSyncWarnings": [Function],
-                                        "valid": true,
-                                        "validExceptSubmit": true,
-                                        "validate": [Function],
-                                        "values": Object {},
-                                        "warning": undefined,
-                                      }
-                                    }
-                                    className="pt-input pt-large"
-                                    component={[Function]}
-                                    name="firstName"
-                                    normalize={[Function]}
-                                    props={
-                                      Object {
-                                        "placeholder": "page1.placeholder.firstName",
-                                      }
-                                    }
-                                    type="text"
-                                  >
-                                    <ConnectedField
-                                      _reduxForm={
-                                        Object {
-                                          "anyTouched": false,
-                                          "array": Object {
-                                            "insert": [Function],
-                                            "move": [Function],
-                                            "pop": [Function],
-                                            "push": [Function],
-                                            "remove": [Function],
-                                            "removeAll": [Function],
-                                            "shift": [Function],
-                                            "splice": [Function],
-                                            "swap": [Function],
-                                            "unshift": [Function],
-                                          },
-                                          "arrayInsert": [Function],
-                                          "arrayMove": [Function],
-                                          "arrayPop": [Function],
-                                          "arrayPush": [Function],
-                                          "arrayRemove": [Function],
-                                          "arrayRemoveAll": [Function],
-                                          "arrayShift": [Function],
-                                          "arraySplice": [Function],
-                                          "arraySwap": [Function],
-                                          "arrayUnshift": [Function],
-                                          "asyncErrors": undefined,
-                                          "asyncValidate": [Function],
-                                          "asyncValidating": false,
-                                          "autofill": [Function],
-                                          "blur": [Function],
-                                          "change": [Function],
-                                          "clearAsyncError": [Function],
-                                          "clearSubmit": [Function],
-                                          "clearSubmitErrors": [Function],
-                                          "destroy": [Function],
-                                          "destroyOnUnmount": false,
-                                          "dirty": false,
-                                          "dispatch": [Function],
-                                          "enableReinitialize": false,
-                                          "error": undefined,
-                                          "focus": [Function],
-                                          "forceUnregisterOnUnmount": true,
-                                          "form": "cards",
-                                          "getFormState": [Function],
-                                          "getValues": [Function],
-                                          "initialValues": undefined,
-                                          "initialize": [Function],
-                                          "initialized": false,
-                                          "invalid": false,
-                                          "keepDirtyOnReinitialize": false,
-                                          "onSubmit": [Function],
-                                          "pageIndex": 1,
-                                          "persistentSubmitErrors": false,
-                                          "pristine": true,
-                                          "pure": true,
-                                          "register": [Function],
-                                          "registerField": [Function],
-                                          "registerInnerOnSubmit": [Function],
-                                          "registeredFields": undefined,
-                                          "reset": [Function],
-                                          "sectionPrefix": undefined,
-                                          "setSubmitFailed": [Function],
-                                          "setSubmitSucceeded": [Function],
-                                          "shouldAsyncValidate": [Function],
-                                          "shouldError": [Function],
-                                          "shouldValidate": [Function],
-                                          "shouldWarn": [Function],
-                                          "startAsyncValidation": [Function],
-                                          "startSubmit": [Function],
-                                          "stopAsyncValidation": [Function],
-                                          "stopSubmit": [Function],
-                                          "submit": [Function],
-                                          "submitFailed": false,
-                                          "submitSucceeded": false,
-                                          "submitting": false,
-                                          "syncErrors": Object {},
-                                          "syncWarnings": Object {},
-                                          "touch": [Function],
-                                          "touchOnBlur": true,
-                                          "touchOnChange": false,
-                                          "triggerSubmit": undefined,
-                                          "unregister": [Function],
-                                          "unregisterField": [Function],
-                                          "untouch": [Function],
-                                          "updateSyncErrors": [Function],
-                                          "updateSyncWarnings": [Function],
-                                          "valid": true,
-                                          "validExceptSubmit": true,
-                                          "validate": [Function],
-                                          "values": Object {},
-                                          "warning": undefined,
-                                        }
-                                      }
-                                      _value={undefined}
-                                      asyncError={undefined}
-                                      asyncValidating={false}
-                                      className="pt-input pt-large"
-                                      component={[Function]}
-                                      dirty={false}
-                                      dispatch={[Function]}
-                                      initial={undefined}
-                                      name="firstName"
-                                      normalize={[Function]}
-                                      pristine={true}
-                                      props={
-                                        Object {
-                                          "placeholder": "page1.placeholder.firstName",
-                                        }
-                                      }
-                                      state={undefined}
-                                      submitError={undefined}
-                                      submitFailed={undefined}
-                                      submitting={undefined}
-                                      syncError={undefined}
-                                      syncWarning={undefined}
-                                      type="text"
-                                      value={undefined}
-                                    >
-                                      <InputField
-                                        className="pt-input pt-large"
-                                        input={
-                                          Object {
-                                            "name": "firstName",
-                                            "onBlur": [Function],
-                                            "onChange": [Function],
-                                            "onDragStart": [Function],
-                                            "onDrop": [Function],
-                                            "onFocus": [Function],
-                                            "value": "",
-                                          }
-                                        }
-                                        meta={
-                                          Object {
-                                            "active": false,
-                                            "asyncValidating": false,
-                                            "autofilled": false,
-                                            "dirty": false,
-                                            "dispatch": [Function],
-                                            "error": undefined,
-                                            "form": "cards",
-                                            "initial": undefined,
-                                            "invalid": false,
-                                            "pristine": true,
-                                            "submitFailed": false,
-                                            "submitting": false,
-                                            "touched": false,
-                                            "valid": true,
-                                            "visited": false,
-                                            "warning": undefined,
-                                          }
-                                        }
-                                        placeholder="page1.placeholder.firstName"
-                                        type="text"
-                                      >
-                                        <div>
-                                          <input
-                                            className="pt-input pt-fill pt-large"
-                                            name="firstName"
-                                            onBlur={[Function]}
-                                            onChange={[Function]}
-                                            onDragStart={[Function]}
-                                            onDrop={[Function]}
-                                            onFocus={[Function]}
-                                            placeholder="page1.placeholder.firstName"
-                                            value=""
-                                          />
-                                        </div>
-                                      </InputField>
-                                    </ConnectedField>
-                                  </Connect(ConnectedField)>
-                                </Field>
-                                <Field
-                                  className="pt-input pt-large"
-                                  component={[Function]}
-                                  name="lastName"
-                                  props={
-                                    Object {
-                                      "placeholder": "page1.placeholder.lastName",
-                                    }
-                                  }
-                                  type="text"
-                                >
-                                  <Connect(ConnectedField)
-                                    _reduxForm={
-                                      Object {
-                                        "anyTouched": false,
-                                        "array": Object {
-                                          "insert": [Function],
-                                          "move": [Function],
-                                          "pop": [Function],
-                                          "push": [Function],
-                                          "remove": [Function],
-                                          "removeAll": [Function],
-                                          "shift": [Function],
-                                          "splice": [Function],
-                                          "swap": [Function],
-                                          "unshift": [Function],
-                                        },
-                                        "arrayInsert": [Function],
-                                        "arrayMove": [Function],
-                                        "arrayPop": [Function],
-                                        "arrayPush": [Function],
-                                        "arrayRemove": [Function],
-                                        "arrayRemoveAll": [Function],
-                                        "arrayShift": [Function],
-                                        "arraySplice": [Function],
-                                        "arraySwap": [Function],
-                                        "arrayUnshift": [Function],
-                                        "asyncErrors": undefined,
-                                        "asyncValidate": [Function],
-                                        "asyncValidating": false,
-                                        "autofill": [Function],
-                                        "blur": [Function],
-                                        "change": [Function],
-                                        "clearAsyncError": [Function],
-                                        "clearSubmit": [Function],
-                                        "clearSubmitErrors": [Function],
-                                        "destroy": [Function],
-                                        "destroyOnUnmount": false,
-                                        "dirty": false,
-                                        "dispatch": [Function],
-                                        "enableReinitialize": false,
-                                        "error": undefined,
-                                        "focus": [Function],
-                                        "forceUnregisterOnUnmount": true,
-                                        "form": "cards",
-                                        "getFormState": [Function],
-                                        "getValues": [Function],
-                                        "initialValues": undefined,
-                                        "initialize": [Function],
-                                        "initialized": false,
-                                        "invalid": false,
-                                        "keepDirtyOnReinitialize": false,
-                                        "onSubmit": [Function],
-                                        "pageIndex": 1,
-                                        "persistentSubmitErrors": false,
-                                        "pristine": true,
-                                        "pure": true,
-                                        "register": [Function],
-                                        "registerField": [Function],
-                                        "registerInnerOnSubmit": [Function],
-                                        "registeredFields": undefined,
-                                        "reset": [Function],
-                                        "sectionPrefix": undefined,
-                                        "setSubmitFailed": [Function],
-                                        "setSubmitSucceeded": [Function],
-                                        "shouldAsyncValidate": [Function],
-                                        "shouldError": [Function],
-                                        "shouldValidate": [Function],
-                                        "shouldWarn": [Function],
-                                        "startAsyncValidation": [Function],
-                                        "startSubmit": [Function],
-                                        "stopAsyncValidation": [Function],
-                                        "stopSubmit": [Function],
-                                        "submit": [Function],
-                                        "submitFailed": false,
-                                        "submitSucceeded": false,
-                                        "submitting": false,
-                                        "syncErrors": Object {},
-                                        "syncWarnings": Object {},
-                                        "touch": [Function],
-                                        "touchOnBlur": true,
-                                        "touchOnChange": false,
-                                        "triggerSubmit": undefined,
-                                        "unregister": [Function],
-                                        "unregisterField": [Function],
-                                        "untouch": [Function],
-                                        "updateSyncErrors": [Function],
-                                        "updateSyncWarnings": [Function],
-                                        "valid": true,
-                                        "validExceptSubmit": true,
-                                        "validate": [Function],
-                                        "values": Object {},
-                                        "warning": undefined,
-                                      }
-                                    }
-                                    className="pt-input pt-large"
-                                    component={[Function]}
-                                    name="lastName"
-                                    normalize={[Function]}
-                                    props={
-                                      Object {
-                                        "placeholder": "page1.placeholder.lastName",
-                                      }
-                                    }
-                                    type="text"
-                                  >
-                                    <ConnectedField
-                                      _reduxForm={
-                                        Object {
-                                          "anyTouched": false,
-                                          "array": Object {
-                                            "insert": [Function],
-                                            "move": [Function],
-                                            "pop": [Function],
-                                            "push": [Function],
-                                            "remove": [Function],
-                                            "removeAll": [Function],
-                                            "shift": [Function],
-                                            "splice": [Function],
-                                            "swap": [Function],
-                                            "unshift": [Function],
-                                          },
-                                          "arrayInsert": [Function],
-                                          "arrayMove": [Function],
-                                          "arrayPop": [Function],
-                                          "arrayPush": [Function],
-                                          "arrayRemove": [Function],
-                                          "arrayRemoveAll": [Function],
-                                          "arrayShift": [Function],
-                                          "arraySplice": [Function],
-                                          "arraySwap": [Function],
-                                          "arrayUnshift": [Function],
-                                          "asyncErrors": undefined,
-                                          "asyncValidate": [Function],
-                                          "asyncValidating": false,
-                                          "autofill": [Function],
-                                          "blur": [Function],
-                                          "change": [Function],
-                                          "clearAsyncError": [Function],
-                                          "clearSubmit": [Function],
-                                          "clearSubmitErrors": [Function],
-                                          "destroy": [Function],
-                                          "destroyOnUnmount": false,
-                                          "dirty": false,
-                                          "dispatch": [Function],
-                                          "enableReinitialize": false,
-                                          "error": undefined,
-                                          "focus": [Function],
-                                          "forceUnregisterOnUnmount": true,
-                                          "form": "cards",
-                                          "getFormState": [Function],
-                                          "getValues": [Function],
-                                          "initialValues": undefined,
-                                          "initialize": [Function],
-                                          "initialized": false,
-                                          "invalid": false,
-                                          "keepDirtyOnReinitialize": false,
-                                          "onSubmit": [Function],
-                                          "pageIndex": 1,
-                                          "persistentSubmitErrors": false,
-                                          "pristine": true,
-                                          "pure": true,
-                                          "register": [Function],
-                                          "registerField": [Function],
-                                          "registerInnerOnSubmit": [Function],
-                                          "registeredFields": undefined,
-                                          "reset": [Function],
-                                          "sectionPrefix": undefined,
-                                          "setSubmitFailed": [Function],
-                                          "setSubmitSucceeded": [Function],
-                                          "shouldAsyncValidate": [Function],
-                                          "shouldError": [Function],
-                                          "shouldValidate": [Function],
-                                          "shouldWarn": [Function],
-                                          "startAsyncValidation": [Function],
-                                          "startSubmit": [Function],
-                                          "stopAsyncValidation": [Function],
-                                          "stopSubmit": [Function],
-                                          "submit": [Function],
-                                          "submitFailed": false,
-                                          "submitSucceeded": false,
-                                          "submitting": false,
-                                          "syncErrors": Object {},
-                                          "syncWarnings": Object {},
-                                          "touch": [Function],
-                                          "touchOnBlur": true,
-                                          "touchOnChange": false,
-                                          "triggerSubmit": undefined,
-                                          "unregister": [Function],
-                                          "unregisterField": [Function],
-                                          "untouch": [Function],
-                                          "updateSyncErrors": [Function],
-                                          "updateSyncWarnings": [Function],
-                                          "valid": true,
-                                          "validExceptSubmit": true,
-                                          "validate": [Function],
-                                          "values": Object {},
-                                          "warning": undefined,
-                                        }
-                                      }
-                                      _value={undefined}
-                                      asyncError={undefined}
-                                      asyncValidating={false}
-                                      className="pt-input pt-large"
-                                      component={[Function]}
-                                      dirty={false}
-                                      dispatch={[Function]}
-                                      initial={undefined}
-                                      name="lastName"
-                                      normalize={[Function]}
-                                      pristine={true}
-                                      props={
-                                        Object {
-                                          "placeholder": "page1.placeholder.lastName",
-                                        }
-                                      }
-                                      state={undefined}
-                                      submitError={undefined}
-                                      submitFailed={undefined}
-                                      submitting={undefined}
-                                      syncError={undefined}
-                                      syncWarning={undefined}
-                                      type="text"
-                                      value={undefined}
-                                    >
-                                      <InputField
-                                        className="pt-input pt-large"
-                                        input={
-                                          Object {
-                                            "name": "lastName",
-                                            "onBlur": [Function],
-                                            "onChange": [Function],
-                                            "onDragStart": [Function],
-                                            "onDrop": [Function],
-                                            "onFocus": [Function],
-                                            "value": "",
-                                          }
-                                        }
-                                        meta={
-                                          Object {
-                                            "active": false,
-                                            "asyncValidating": false,
-                                            "autofilled": false,
-                                            "dirty": false,
-                                            "dispatch": [Function],
-                                            "error": undefined,
-                                            "form": "cards",
-                                            "initial": undefined,
-                                            "invalid": false,
-                                            "pristine": true,
-                                            "submitFailed": false,
-                                            "submitting": false,
-                                            "touched": false,
-                                            "valid": true,
-                                            "visited": false,
-                                            "warning": undefined,
-                                          }
-                                        }
-                                        placeholder="page1.placeholder.lastName"
-                                        type="text"
-                                      >
-                                        <div>
-                                          <input
-                                            className="pt-input pt-fill pt-large"
-                                            name="lastName"
-                                            onBlur={[Function]}
-                                            onChange={[Function]}
-                                            onDragStart={[Function]}
-                                            onDrop={[Function]}
-                                            onFocus={[Function]}
-                                            placeholder="page1.placeholder.lastName"
-                                            value=""
-                                          />
-                                        </div>
-                                      </InputField>
-                                    </ConnectedField>
-                                  </Connect(ConnectedField)>
-                                </Field>
-                              </div>
-                              <div
-                                style={
-                                  Object {
-                                    "display": "flex",
-                                    "height": "30%",
-                                  }
-                                }
-                              >
-                                <Blueprint.Icon
-                                  iconName="arrow-right"
-                                  onClick={[Function]}
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "backgroundColor": "#DDDDDD",
-                                      "borderRadius": "50%",
-                                      "color": "white",
-                                      "cursor": "pointer",
-                                      "display": "flex",
-                                      "height": "58%",
-                                      "justifyContent": "center",
-                                      "margin": "auto",
-                                      "width": "20%",
-                                    }
-                                  }
-                                >
-                                  <span
-                                    className="pt-icon-standard pt-icon-arrow-right"
-                                    onClick={[Function]}
-                                    style={
-                                      Object {
-                                        "alignItems": "center",
-                                        "backgroundColor": "#DDDDDD",
-                                        "borderRadius": "50%",
-                                        "color": "white",
-                                        "cursor": "pointer",
-                                        "display": "flex",
-                                        "height": "58%",
-                                        "justifyContent": "center",
-                                        "margin": "auto",
-                                        "width": "20%",
-                                      }
-                                    }
-                                  />
-                                </Blueprint.Icon>
                               </div>
                             </div>
                             <div
@@ -1564,7 +1117,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                 className="pt-tooltip-indicator"
                                 content={
                                   <em>
-                                    page1.tooltip
+                                    page3.tooltip
                                   </em>
                                 }
                                 hoverCloseDelay={0}
@@ -1584,7 +1137,7 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                                   className="pt-tooltip-indicator"
                                   content={
                                     <em>
-                                      page1.tooltip
+                                      page3.tooltip
                                     </em>
                                   }
                                   defaultIsOpen={false}
@@ -1691,14 +1244,14 @@ exports[`ConnectedFirstPage renders without crashing 1`] = `
                     </div>
                   </div>
                 </Page>
-              </FirstPage>
-            </FirstPage>
-          </Form(FirstPage)>
-        </Connect(Form(FirstPage))>
+              </ThirdPage>
+            </ThirdPage>
+          </Form(ThirdPage)>
+        </Connect(Form(ThirdPage))>
       </ReduxForm>
     </Connect(ReduxForm)>
   </IntlProvider>
 </Provider>
 `;
 
-exports[`FirstPage renders without crashing 1`] = `<FirstPage />`;
+exports[`ThirdPage renders without crashing 1`] = `<ThirdPage />`;

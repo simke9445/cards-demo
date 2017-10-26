@@ -16,6 +16,8 @@ it('FirstPage renders without crashing', () => {
       <FirstPage/>        
     </IntlProvider>
   );
+
+  expect(wrapper).toMatchSnapshot();
 })
 
 it('ConnectedFirstPage renders without crashing', () => {
