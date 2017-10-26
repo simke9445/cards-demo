@@ -5,7 +5,7 @@ import enLocale from 'react-intl/locale-data/en';
 
 import { LOCALES } from '../constants/locales';
 
-import en from './en.yaml';
+import en from './en.json';
 
 addLocaleData([...enLocale]);
 

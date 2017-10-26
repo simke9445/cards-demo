@@ -60,9 +60,6 @@ exports[`Card renders without crashing 1`] = `
         }
       }
     >
-      <div>
-        test
-      </div>
       <div
         style={
           Object {
@@ -103,7 +100,38 @@ exports[`Card renders without crashing 1`] = `
           "justifyContent": "center",
         }
       }
-    />
+    >
+      <Blueprint.Tooltip
+        className="pt-tooltip-indicator"
+        content={
+          <em>
+            test
+          </em>
+        }
+        hoverCloseDelay={0}
+        hoverOpenDelay={100}
+        isDisabled={false}
+        openOnTargetFocus={true}
+        position={1}
+        rootElementTag="span"
+        transitionDuration={100}
+        useSmartArrowPositioning={true}
+        useSmartPositioning={false}
+      >
+        <span
+          style={
+            Object {
+              "color": "#AFB0B2",
+            }
+          }
+        >
+          <FormattedMessage
+            id="card.footer"
+            values={Object {}}
+          />
+        </span>
+      </Blueprint.Tooltip>
+    </div>
   </div>
 </div>
 `;

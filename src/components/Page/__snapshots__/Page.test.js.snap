@@ -86,7 +86,7 @@ exports[`Page renders without crashing 1`] = `
   >
     <div
       className="half-circle"
-      onClick={null}
+      onClick={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -109,7 +109,7 @@ exports[`Page renders without crashing 1`] = `
     </div>
     <div
       className="half-circle-rotated"
-      onClick={null}
+      onClick={[Function]}
       style={
         Object {
           "alignItems": "center",

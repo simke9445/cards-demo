@@ -12,13 +12,13 @@ import App from "./App";
 
 import { configureStore } from "./configureStore";
 
-const IntlApp = ( { locale, messages, page } ) => (
+export const IntlApp = ( { locale, messages, page } ) => (
 	<IntlProvider locale={locale} messages={messages}>
 		<App page={page}/>
 	</IntlProvider>
 );
 
-const ConnectedIntlApp = connect(
+export const ConnectedIntlApp = connect(
 	state => {
 		const locale = getLocale(state);
 		const messages = translations[locale];
