@@ -1,3 +1,21 @@
+### Project folder structure
+It contains the standard Create React App structure with a couple of differences in source folder.
+
+    .
+    ├── actions                # Redux Actions
+    ├── components             # Presentational Components used within the program
+    ├── constants              # Static objects used within the program
+    ├── http                   # Http services
+    ├── mock                   # Mocked data (in case the feature is NYI on backend)
+    ├── reducers               # Redux reducers
+    ├── sagas                  # Redux Sagas
+    ├── selectors              # Redux state selectors
+    ├── translations           # React-intl translation files
+    ├── utils                  # Utility files
+    └── views                  # Container Components (main views, route containers)
+    
+To start/build/test the program just run the corresponding npm script. (npm run start/build/test)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
