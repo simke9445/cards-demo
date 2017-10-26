@@ -15,7 +15,7 @@ It contains the standard Create React App structure with a couple of differences
     ├── utils                  # Utility files
     └── views                  # Container Components (main views, route containers)
     
-To start/build/test the program just run the corresponding npm script. (npm start/build/test)
+To start/build/test the program just run the corresponding npm script. (npm run start/build/test).
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
